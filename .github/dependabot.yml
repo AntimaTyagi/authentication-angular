@@ -1,0 +1,16 @@
+version: 2
+updates:
+      
+  - package-ecosystem: "npm" 
+    directory: "/Sample-01" 
+    schedule:
+      interval: "daily"
+    groups:
+      angular:
+        patterns:
+          - "@angular*"
+        update-types:
+          - "minor"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-patch"]
